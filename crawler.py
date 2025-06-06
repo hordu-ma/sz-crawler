@@ -249,7 +249,7 @@ class SZCrawler:
 
 def main():
     try:
-        # 检查是否使用命令行模式
+        # 只保留命令行模式
         if len(sys.argv) > 1 and sys.argv[1] == '--cli':
             crawler = SZCrawler()
             start_date = None
@@ -263,23 +263,10 @@ def main():
                 
             crawler.run(start_date, end_date)
         else:
-            # 尝试导入GUI相关模块
-            try:
-                import tkinter as tk
-                from tkinter import ttk, messagebox, scrolledtext
-                import threading
-                import queue
-                
-                # 如果成功导入，启动GUI模式
-                root = tk.Tk()
-                from crawler_gui import SZCrawlerGUI
-                app = SZCrawlerGUI(root)
-                root.mainloop()
-            except ImportError:
-                print("无法启动图形界面，请使用命令行模式：")
-                print("python crawler.py --cli [开始日期] [结束日期]")
-                print("日期格式：YYYY-MM-DD")
-                sys.exit(1)
+            print("请使用命令行模式运行：")
+            print("python crawler.py --cli [开始日期] [结束日期]")
+            print("日期格式：YYYY-MM-DD")
+            sys.exit(1)
     except Exception as e:
         logger.error(f"程序运行出错: {str(e)}", exc_info=True)
         sys.exit(1)
