@@ -1,0 +1,27 @@
+beautifulsoup4 4.12.2 Screen-scraping library
+└── soupsieve >1.2
+fake-useragent 1.4.0 Up-to-date simple useragent faker with real world database
+pandas 2.1.4 Powerful data structures for data analysis, time series, and statistics
+├── numpy >=1.26.0,<2
+├── python-dateutil >=2.8.2
+│   └── six >=1.5 
+├── pytz >=2020.1
+└── tzdata >=2022.1
+pyinstaller 6.3.0 PyInstaller bundles a Python application and all its dependencies into a single package.
+├── altgraph *
+├── macholib >=1.8
+│   └── altgraph >=0.17 
+├── packaging >=22.0
+├── pefile >=2022.5.30
+├── pyinstaller-hooks-contrib >=2021.4
+│   ├── packaging >=22.0 
+│   └── setuptools >=42.0.0 
+├── pywin32-ctypes >=0.2.1
+└── setuptools >=42.0.0
+python-dateutil 2.8.2 Extensions to the standard Python datetime module
+└── six >=1.5
+requests 2.31.0 Python HTTP for Humans.
+├── certifi >=2017.4.17
+├── charset-normalizer >=2,<4
+├── idna >=2.5,<4
+└── urllib3 >=1.21.1,<3
